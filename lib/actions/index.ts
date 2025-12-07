@@ -90,6 +90,26 @@ export async function getProducts(limit?: number): Promise<IProduct[]> {
 }
 
 /**
+ * Search products by title (client-side filtering)
+ */
+export async function searchProducts(query: string): Promise<IProduct[]> {
+  try {
+    const allProducts = await getProducts();
+    const q = query.toLowerCase();
+
+    return allProducts.filter(
+      (product) =>
+        product.title.toLowerCase().includes(q) ||
+        product.description.toLowerCase().includes(q) ||
+        product.category.toLowerCase().includes(q)
+    );
+  } catch (error) {
+    console.error("Error searching products:", error);
+    return [];
+  }
+}
+
+/**
  * Fetch all products by category
  */
 export async function getProductsByCategory(

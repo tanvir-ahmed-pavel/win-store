@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Headphones, Heart, ShoppingCart, User } from "lucide-react";
-import SearchBar from "./SearchBar";
 import NavBar from "./NavBar";
+import { CartIcon } from "../ui";
+import { SearchBar } from "./SearchBar";
 export default function Header() {
   return (
     <header className="w-full ">
@@ -15,7 +16,7 @@ export default function Header() {
                 alt="WinStore"
                 width={132}
                 height={48}
-                className="h-auto"
+                className="h-auto w-auto"
               />
             </Link>
             <div className="hidden lg:block">
@@ -49,8 +50,7 @@ export default function Header() {
                 href="#"
                 className="flex items-center gap-1 hover:text-secondary"
               >
-                <ShoppingCart size={20} />
-                <span className="hidden sm:inline">Cart</span>
+                <CartIcon></CartIcon>
               </Link>
             </div>
           </div>

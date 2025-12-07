@@ -14,7 +14,7 @@ export default function Footer() {
                 alt="WinStore"
                 width={132}
                 height={48}
-                className="w-auto"
+                className="w-auto h-auto"
               />
             </Link>
 

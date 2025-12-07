@@ -1,12 +1,18 @@
 "use client";
 
-// Small client components for interactive elements only
+import { useCartContext } from "@/context/CartContext";
+import { IProduct } from "@/types/product";
 
-export function AddToCartButton() {
+interface AddToCartButtonProps {
+  product: IProduct;
+}
+
+export function AddToCartButton({ product }: AddToCartButtonProps) {
+  const { addToCart } = useCartContext();
   return (
     <button
       onClick={() => {
-        console.log("Add to cart clicked");
+        addToCart(product);
       }}
       className="w-full bg-primary text-white py-2 font-light text-sm hover:bg-teal-500 transition-colors mt-auto cursor-pointer"
     >

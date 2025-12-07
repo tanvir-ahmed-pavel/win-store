@@ -35,7 +35,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
 
         <div>
-          <AddToCartButton></AddToCartButton>
+          <AddToCartButton product={product}></AddToCartButton>
         </div>
       </div>
     </>
