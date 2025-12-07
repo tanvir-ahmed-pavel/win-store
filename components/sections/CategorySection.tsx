@@ -37,6 +37,7 @@ export default async function CategorySection() {
                     categoryImages[cat.name] ||
                     "https://placehold.co/400x300/f3f4f6/1f2937?text=Category"
                   }
+                  loading="eager"
                   alt={cat.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

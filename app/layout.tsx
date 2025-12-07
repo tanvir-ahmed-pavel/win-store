@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "WinStore",
   description: "An E-Commerce Platform",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
